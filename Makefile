@@ -24,9 +24,9 @@ MYSQL_PWD?=
 DB_NAME?=${PROJECT_NAME}
 DB_PREFIX?=wp_
 
-ADMIN_NAME?=admin
-ADMIN_EMAIL?=admin@mail.com
-ADMIN_PASSWORD?=12345678
+ADMIN_NAME?=godwin
+ADMIN_EMAIL?=godwin.elitcha@gmail.com
+ADMIN_PASSWORD?=
 
 #Functions for displaying message
 
@@ -90,8 +90,11 @@ install: ## Install Wp
 	wp option update permalink_structure '/%postname%'
 	wp rewrite flush --hard
 
+	$(call show_message, "SITES CREDENTIALS")
+	$(call show_message, "LOGIN="${ADMIN_NAME})
+
 	$(call show_message, "OPEN WP-ADMIN")
-	wp admin
+	wp admin --user=${ADMIN_NAME}
 
 clean: ##Delete Database and files
 	$(call show_message, "DELETE DATABASE")

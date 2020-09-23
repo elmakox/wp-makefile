@@ -17,9 +17,9 @@ Will setup a fresh wordpress with following default options:
 * DB User : root
 * DB Password : 
 * Table preffix: wp_
-* Admin name : admin
-* Admin email : admin@mail.com
-* Admin password : 12345678
+* Admin name : godwin
+* Admin email : godwin.elitcha@gmail.com
+* Admin password : {Get it in terminal}
 
 #### Install with custom options :
 
